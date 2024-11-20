@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikipedia Live Changes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/static/scripts.js" defer></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto p-4">
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold">Wikipedia Live Changes</h1>
+            <div class="text-sm text-gray-600">
+                Watching live changes across all Wikimedia projects
+            </div>
+            <div class="mt-2">
+                <span class="text-sm">Status: </span>
+                <span id="status" class="text-sm font-semibold text-green-600">Connected</span>
+            </div>
+        </header>
+
+        <!-- Stats Section -->
+        <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <div class="text-sm text-gray-600">Changes</div>
+                <div id="change-count" class="text-2xl font-bold">0</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <div class="text-sm text-gray-600">Users</div>
+                <div id="user-count" class="text-2xl font-bold">0</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <div class="text-sm text-gray-600">Wikis</div>
+                <div id="wiki-count" class="text-2xl font-bold">0</div>
+            </div>
+        </div>
+
+        <!-- Changes Feed -->
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+            <div class="px-4 py-3 bg-gray-50 border-b">
+                <h2 class="font-semibold">Recent Changes</h2>
+            </div>
+            <div id="changes" class="divide-y overflow-auto" style="max-height: 600px;">
+                <!-- Changes will be inserted here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
